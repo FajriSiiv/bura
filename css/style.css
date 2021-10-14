@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5 all;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: fit-content;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 20px 100px 0px 100px;
+}
+
+.nav {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav .brick {
+  position: absolute;
+  background: red;
+  width: 100px;
+  left: 50%;
+  transform: translateY(-30px);
+  z-index: -10;
+  border-radius: 30px;
+}
+
+.nav .brick.satu {
+  left: 28%;
+  background: #a2d2ff;
+  width: 200px;
+  height: 200px;
+}
+
+.nav .brick.dua {
+  left: 43%;
+  background: #cb997e;
+  width: 200px;
+  height: 150px;
+  z-index: -11;
+}
+
+.nav .brick.tiga {
+  left: 58%;
+  background: #fff3b0;
+  width: 200px;
+  height: 200px;
+}
+
+.nav ul {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav ul li {
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  font-size: 18px;
+}
+
+.nav .judul {
+  text-align: center;
+  font-family: "Prata";
+  font-size: 40px;
+}
+
+.nav .sign {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav .sign li {
+  margin: 0 5px;
+}
+
+.nav .sign li a {
+  font-size: 18px;
+  display: inline-block;
+  padding: 6px 25px;
+  background: white;
+  border: 2px solid #ff4d6d;
+  border-radius: 20px;
+}
+
+.nav .sign li a:hover {
+  padding: 6px 25px;
+  background: #ff4d6d;
+  border-radius: 20px;
+}
+
+.active {
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  width: 30px !important;
+  height: 5px !important;
+  left: 0;
+  bottom: -15px;
+  background: #ff4d6eab !important;
+  transition: 0.3s all;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  left: 0;
+  bottom: -15px;
+  background: #ff4d6e00;
+}
+
+.landing {
+  height: 100vh;
+  text-align: center;
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 50px;
+}
+
+.landing .diamond-cursor {
+  position: absolute;
+  left: -30px;
+  transform: translateX(0);
+  top: 40px;
+}
+
+.landing .planet {
+  position: absolute;
+  right: -100px;
+  top: 60px;
+}
+
+.landing .logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #f9c74f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 57px;
+}
+
+.landing .metode {
+  color: #f9c74f;
+  font-weight: 450;
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+}
+
+.landing .main-text {
+  font-size: 60px;
+  width: 50%;
+  line-height: 80px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.landing .main-text span {
+  position: relative;
+}
+
+.landing .main-text span::before {
+  content: "";
+  position: absolute;
+  width: 115%;
+  background: #ff4d6d;
+  height: 70%;
+  z-index: -1;
+  margin-top: 10px;
+  margin-left: -13px;
+  clip-path: polygon(9% 0, 100% 0%, 93% 100%, 0% 100%);
+}
+
+.landing .experience {
+  font-size: 14x;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.landing .download {
+  display: flex;
+  flex-direction: row;
+}
+
+.landing .download button {
+  display: flex;
+  margin: 0 15px;
+  padding: 5px 15px;
+  align-items: center;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.199));
+  border: 2px solid #f8f8f8;
+  cursor: pointer;
+}
+
+.landing .download button img {
+  margin-right: 10px;
+}
+
+.landing .download button:hover {
+  filter: none;
+  box-shadow: 32px 32px 64px #c7c7c7, -32px -32px 64px #f9f9f9;
+  border: 2px solid #ff4d6d;
+}
+
+.pay-bank {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.pay-bank .deal {
+  position: absolute;
+  z-index: -1;
+  top: -100px;
+  left: 20px;
+  transform: translateX(0);
+}
+
+.pay-bank .rocket {
+  position: absolute;
+  z-index: -1;
+  bottom: -30px;
+  right: 20px;
+  transform: translateX(0);
+}
+
+.pay-bank .step {
+  display: flex;
+  flex-direction: column;
+}
+
+.pay-bank .step h4 {
+  margin: 8px 0;
+  padding: 10px 20px;
+  background: #fcdf9cc5;
+}
+
+.pay-bank .img-phone {
+  height: 300px;
+  width: 300px;
+  margin-top: 80px;
+}
+
+.pay-bank .img-phone img {
+  height: 322.01px;
+  width: 250px;
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    padding: 0;
+    overflow: hidden;
+  }
+  .nav {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .nav ul {
+    width: 100%;
+    justify-content: center;
+  }
+  .nav ul .link {
+    font-size: 12px;
+  }
+  .nav .judul {
+    width: 100%;
+    margin: 15px 0;
+    font-size: 30px;
+  }
+  .nav .sign {
+    width: 100%;
+    justify-content: center;
+  }
+  .nav .sign li a {
+    font-size: 13px;
+    padding: 5px 12px;
+  }
+  .nav .sign li a:hover {
+    padding: 5px 12px;
+  }
+  .landing {
+    margin-bottom: 30px;
+    height: fit-content;
+    height: 65vh;
+  }
+  .landing .diamond-cursor {
+    width: 200px;
+    height: 200px;
+  }
+  .landing .planet {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+  .landing .logo {
+    margin: 10px 0;
+    height: fit-content;
+    width: fit-content;
+    padding: 15px;
+  }
+  .landing .logo img {
+    width: 20px;
+    height: 30px;
+    object-fit: contain;
+  }
+  .landing .main-text {
+    font-size: 30px;
+    width: 100%;
+    line-height: normal;
+  }
+  .landing .main-text span::before {
+    bottom: 5px;
+    margin-left: -6px;
+    margin-top: 10px;
+  }
+  .pay-bank {
+    flex-direction: column;
+  }
+  .pay-bank .deal {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+    top: 25%;
+  }
+  .pay-bank .rocket {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    left: 35%;
+  }
+  .pay-bank .step {
+    padding: 0 10px;
+  }
+  .pay-bank .step h4 {
+    font-size: 13px;
+  }
+  .pay-bank .img-phone {
+    text-align: center;
+  }
+  .pay-bank .img-phone img {
+    height: 250px;
+    width: 180px;
+    object-fit: cover;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5 all;
+}
+*::before,
+**::after {
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: fit-content;
+}
+ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.wrapper {
+  width: 100%;
+  padding: 20px 100px 0px 100px;
+}
+// Navbar
+// ========*============
+.nav {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  position: relative;
+  //bar
+
+  // brick
+  .brick {
+    position: absolute;
+    background: red;
+    width: 100px;
+    left: 50%;
+    transform: translateY(-30px);
+    z-index: -10;
+    border-radius: 30px;
+    &.satu {
+      left: 28%;
+      background: #a2d2ff;
+      width: 200px;
+      height: 200px;
+    }
+    &.dua {
+      left: 43%;
+      background: #cb997e;
+      width: 200px;
+      height: 150px;
+      z-index: -11;
+    }
+    &.tiga {
+      left: 58%;
+      background: #fff3b0;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  // Link
+  ul {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    li {
+      margin: 0 15px;
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+  // Judul
+  .judul {
+    text-align: center;
+    font-family: "Prata";
+    font-size: 40px;
+  }
+  // Sign
+  .sign {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    li {
+      margin: 0 5px;
+      a {
+        font-size: 18px;
+        display: inline-block;
+        padding: 6px 25px;
+        background: white;
+        border: 2px solid #ff4d6d;
+        border-radius: 20px;
+        &:hover {
+          padding: 6px 25px;
+          background: #ff4d6d;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+//end navbar
+
+//Active Class
+.active {
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px !important;
+    height: 5px !important;
+    left: 0;
+    bottom: -15px;
+    background: #ff4d6eab !important;
+    transition: 0.3s all;
+  }
+}
+
+//Link class
+.link {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    left: 0;
+    bottom: -15px;
+    background: #ff4d6e00;
+  }
+}
+
+// landing
+.landing {
+  height: 100vh;
+  text-align: center;
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 50px;
+  //planet and diamond
+
+  .diamond-cursor {
+    position: absolute;
+    left: -30px;
+    transform: translateX(0);
+    top: 40px;
+  }
+  .planet {
+    position: absolute;
+    right: -100px;
+    top: 60px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #f9c74f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 57px;
+  }
+  .metode {
+    color: #f9c74f;
+    font-weight: 450;
+    letter-spacing: 0.2px;
+    margin-bottom: 10px;
+  }
+  .main-text {
+    font-size: 60px;
+    width: 50%;
+    line-height: 80px;
+    position: relative;
+    margin-bottom: 30px;
+    span {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 115%;
+        background: #ff4d6d;
+        height: 70%;
+        z-index: -1;
+        margin-top: 10px;
+        margin-left: -13px;
+        clip-path: polygon(9% 0, 100% 0%, 93% 100%, 0% 100%);
+      }
+    }
+  }
+  .experience {
+    font-size: 14x;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .download {
+    display: flex;
+    flex-direction: row;
+    button {
+      display: flex;
+      margin: 0 15px;
+      padding: 5px 15px;
+      align-items: center;
+      border-radius: 30px;
+      border: none;
+      background: white;
+      filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.199));
+      border: 2px solid #f8f8f8;
+
+      cursor: pointer;
+      img {
+        margin-right: 10px;
+      }
+      &:hover {
+        filter: none;
+        box-shadow: 32px 32px 64px #c7c7c7, -32px -32px 64px #f9f9f9;
+        border: 2px solid #ff4d6d;
+      }
+    }
+  }
+}
+
+.pay-bank {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120vh;
+  position: relative;
+  overflow: hidden;
+
+  .deal {
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: 20px;
+    transform: translateX(0);
+  }
+  .rocket {
+    position: absolute;
+    z-index: -1;
+    bottom: -30px;
+    right: 20px;
+    transform: translateX(0);
+  }
+  .step {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      margin: 8px 0;
+      padding: 10px 20px;
+      background: #fcdf9cc5;
+    }
+  }
+  .img-phone {
+    height: 300px;
+    width: 300px;
+    margin-top: 80px;
+    img {
+      height: 322.01px;
+      width: 250px;
+    }
+  }
+}
+
+// Mobile Query 576px
+// ================
+@media (max-width: 576px) {
+  .wrapper {
+    padding: 0;
+    overflow: hidden;
+  }
+  //Nav
+  .nav {
+    flex-direction: column;
+    padding-top: 20px;
+    ul {
+      width: 100%;
+      justify-content: center;
+      .link {
+        font-size: 12px;
+      }
+    }
+    .judul {
+      width: 100%;
+      margin: 15px 0;
+      font-size: 30px;
+    }
+    .sign {
+      width: 100%;
+      justify-content: center;
+      li {
+        a {
+          font-size: 13px;
+          padding: 5px 12px;
+          &:hover {
+            padding: 5px 12px;
+          }
+        }
+      }
+    }
+  }
+  .landing {
+    margin-bottom: 30px;
+    height: fit-content;
+    height: 65vh;
+    .diamond-cursor {
+      width: 200px;
+      height: 200px;
+    }
+    .planet {
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+    }
+    .logo {
+      margin: 10px 0;
+      height: fit-content;
+      width: fit-content;
+      padding: 15px;
+      img {
+        width: 20px;
+        height: 30px;
+        object-fit: contain;
+      }
+    }
+    .main-text {
+      font-size: 30px;
+      width: 100%;
+      line-height: normal;
+      span {
+        &::before {
+          bottom: 5px;
+          margin-left: -6px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .pay-bank {
+    flex-direction: column;
+    .deal {
+      width: 200px;
+      height: 250px;
+      object-fit: contain;
+      top: 25%;
+    }
+    .rocket {
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+      left: 35%;
+    }
+    .step {
+      padding: 0 10px;
+      h4 {
+        font-size: 13px;
+      }
+    }
+    .img-phone {
+      text-align: center;
+      img {
+        height: 250px;
+        width: 180px;
+        object-fit: cover;
+      }
+    }
+  }
+}
